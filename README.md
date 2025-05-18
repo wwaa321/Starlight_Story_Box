@@ -3,7 +3,7 @@
 #### 1. 概述
 **星辉故事盒子** 是一款专为视障儿童设计的有声书制作工具。它能够将绘本等图像内容转换为有声故事，帮助视障儿童通过听觉感受绘本的精彩内容。用户可以通过简单的操作，上传图片、生成故事文本，并选择音色生成有声故事音频。
 
-![]([https://github.com/wwaa321/Starlight_Story_Box/blob/main/img/view.jpg](https://github.com/wwaa321/Starlight_Story_Box/blob/main/img/view.jpg?raw=true))
+![](https://github.com/wwaa321/Starlight_Story_Box/blob/main/img/view.jpg?raw=true)
 ---
 
 #### 2. 主要功能
