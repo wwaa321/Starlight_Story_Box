@@ -1,0 +1,8 @@
+<configiuration>
+    <llm_setting>
+        <apikey></apikey>
+        <base_url></base_url>
+        <chat_model></chat_model>
+        <vision_model></vision_model>
+    </llm_setting>
+</configiuration>
