@@ -46,6 +46,7 @@ def main(page: ft.Page): #故事初始窗口
     page.window.width=1280
     page.window.height=850
     page.window.maximizable = False
+    page.window.icon = "/img/logo.ico"
     page.window.center()
 
     # 设置全局默认字体
@@ -565,11 +566,11 @@ def main(page: ft.Page): #故事初始窗口
                 story_preview.value +=chunk
                 story_preview.update()
             
-            page.open(ft.SnackBar(content=f"生成故事成功！",action="好的"))
+            page.open(ft.SnackBar(ft.Text("生成成功"),action="好的"))
             page.update()
             
         except Exception as e:
-            page.open(ft.SnackBar(content=f"生成故事失败：{str(e)}",action="好的"))
+            page.open(ft.SnackBar(ft.Text("生成失败"),action="好的"))
             page.update()
     
     def generate_audio(story_preview,audio_roles,story_data): #生成故事音频
@@ -619,6 +620,7 @@ def main(page: ft.Page): #故事初始窗口
                     ft.TextField(label="base_url", width=300,value=base_url_info),
                     ft.TextField(label="chat_model", width=300,value=chat_model_info),
                     ft.TextField(label="vision_model", width=300,value=vision_modei_info),
+                    ft.Text("保存后请重启应用程序以生效"),
                 ]
             )
             ,
@@ -631,6 +633,7 @@ def main(page: ft.Page): #故事初始窗口
         dialog = ft.AlertDialog(
             title=ft.Text("配置"),
             content=dialog_form,
+            actions_alignment=ft.MainAxisAlignment.CENTER,
             actions=[  
                 ft.TextButton("确定", on_click=lambda e: save_config(e)),  
                 ft.TextButton("关闭",on_click=close_dialog)  
